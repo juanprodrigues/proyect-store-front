@@ -10,23 +10,23 @@ Variables
 ======
 */
 :root {
-  --primaryColor: #9e3aa3;
-  --primaryDarkColor: #4e1d51;
-  --primaryFont: "Catamaran", sans-serif;
-  --slantedFont: "Kaushan Script", cursive;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBackground: rgb(250, 245, 243);
-  --mainOverlay: rgba(35, 10, 36, 0.4);
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
-  --mainRed: #bd0303;
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --mainBorderRadius: 0.25rem;
+  --primaryColor: #0071e3;
+  --primaryDarkColor: #000000;
+  --primaryFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --slantedFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mainWhite: #ffffff;
+  --offWhite: #f5f5f7;
+  --mainBackground: #ffffff;
+  --mainOverlay: rgba(0, 0, 0, 0.4);
+  --mainBlack: #1d1d1f;
+  --mainGrey: #86868b;
+  --darkGrey: #424245;
+  --mainRed: #ff3b30;
+  --mainTransition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --mainSpacing: 0.02rem;
+  --lightShadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --darkShadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --mainBorderRadius: 12px;
   --smallWidth: 85vw;
   --maxWidth: 1170px;
 }
@@ -47,7 +47,7 @@ body {
   background: var(--mainBackground);
   line-height: 1.4;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 5rem;
 }
 h1,
@@ -85,9 +85,10 @@ Buttons
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
-  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--primaryColor);
+  padding: 0.5rem 1.2rem;
   display: inline-block;
+  border-radius: 20px;
   transition: var(--mainTransition);
   cursor: pointer;
   font-size: 0.8rem;
@@ -109,11 +110,11 @@ Buttons
 .btn-primary {
   background: var(--primaryColor);
   color: var(--mainWhite);
-  border-color: var(--primaryColor);
+  border: none;
 }
 .btn-primary:hover {
-  background: transparent;
-  color: var(--primaryColor);
+  background: #0077ed;
+  color: var(--mainWhite);
 }
 .btn-block {
   width: 100%;
@@ -130,7 +131,9 @@ Navbar
 */
 
 .navbar {
-  background: var(--mainWhite);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   height: 5rem;
   position: fixed;
   z-index: 2;
@@ -139,8 +142,6 @@ Navbar
   width: 100%;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--primaryColor);
-  box-shadow: var(--lightShadow);
 }
 .nav-container {
   width: 100%;
